@@ -61,7 +61,7 @@ func (s *Server) Run() {
 				_, err := fmt.Fprintln(client.conn, message)
 				if err != nil {
 					fmt.Printf("Error sending message to %s: %v\n", client.username, err)
-					// Optionally handle the error, e.g., remove the client
+				//todo better handling here
 				}
 			}
 			s.mu.Unlock()
